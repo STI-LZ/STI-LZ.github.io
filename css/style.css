@@ -13,7 +13,7 @@ p {
     text-decoration: None;
     color: #efefef;
     user-select: none;
-    /* cursor: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8' width='10px' height='10px'><circle cx='4' cy='4' r='4' fill='white' /></svg>") 4 4, auto !important; */
+    cursor: url("../img/cursor_1.png"), auto;
 }
 
 header {
@@ -21,6 +21,7 @@ header {
     height: 60px;
     padding: 10px;
 }
+
 
 .topnav ul {
     list-style-type: none;
@@ -47,6 +48,9 @@ header {
 }
 
 section {
+    background-color: rgb(0 0 0 / 25%);;
+    border-radius: 7px;
+    width: 70%;
     margin-left: 200px;
     padding: 20px;
     overflow: hidden;
@@ -59,7 +63,8 @@ h1 {
 
 footer {
     text-align: center;
-    height: 46px;
+    height: 6%;
+    line-height: 250%;
     backdrop-filter: blur(10px);
     background: rgb(0 0 0 / 25%);
 }
