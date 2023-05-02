@@ -1,86 +1,67 @@
 <!DOCTYPE html>
-<html lang="zh_CN">
+<html lang="zh-CN">
 <head>
-    <meta charset="UTF-8">
+    <!-- 基础信息 -->
+    <meta charset="utf-8">
     <title>STI-LZ</title>
-    <link rel="icon" type="image/png" href="./favicon.png">
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-y/izitoast/1.4.0/css/iziToast.min.css">
-    <script type="text/javascript"
-        src="https://lf26-cdn-tos.bytecdntp.com/cdn/expire-1-y/izitoast/1.4.0/js/iziToast.min.js">
-    </script>
+    <link rel="icon" href="./favicon.png">
+    <!-- 引入 -->
+    <script type="text/javascript" src="./js/jquery.min.js"></script>
+    <script type="text/javascript" src="./js/izitoast.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <link rel="stylesheet" type="text/css" href="./css/Bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="./css/iziToast.min.css">
     <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.1.2/css/all.min.css">
 </head>
 <body>
-    <header>
-        <nav class="topnav">
-            <ul>
-                <li>
-                    <a href="#Home">
-                        <i class="fa-solid fa-house"></i>
-                        Home
+    <section id="section" class="section">
+        <div class="bg-all">
+            <img id="bg" onerror="this.classList.add('error');"></img>
+            <div class="cover"></div>
+        </div>
+        <main id="main" class="main">
+            <div class="left">
+                <div class="main-img">
+                    <img id="logo-img" src="./favicon.png" alt="img">
+                    <span class="img-title">STI-LZ</span>
+                </div>
+                <div class="message cards">
+                    <div class="des" id="des">
+                        <i class="fa-solid fa-quote-left"></i>
+                        <div class="des-title">
+                            <span style="font-size: larger;font-weight: bolder;">路中科学技术研究所</span>
+                            <span style="font-weight: bold;">（STI-LZ）</span>
+                            其创立的目的是为了招揽路中的高技术人才，共同促进路中的科技楼发展
+                        </div>
+                        <i class="fa-solid fa-quote-right"></i>
+                    </div>
+                </div>
+                <div class="bookmark" id="bookmark">
+                    <a href="#" class="link" id="github" style="margin-left: 4px"
+                        target="_blank">
+                        <i class="fa-brands fa-github"></i>
                     </a>
-                </li>
-                <li>
-                    <a href="#members">
-                        <i class="fa-solid fa-users"></i>
-                        Members
+                    <a href="#" class="link"
+                        id="qq" target="_blank">
+                        <i class="fa-brands fa-qq"></i>
                     </a>
-                </li>
-            </ul>
-        </nav>
-    </header>
-    <!-- <aside>
-        <img src="./favicon.png" alt="facivon" style="width:100px;">
-    </aside> -->
-    <img src="./LOGO.gif" alt="LOGO" width="990" height="540">
-    <br>
-    <section>
-        <h1>Welcome to STI-LZ</h1>
-        <p>
-            STI-LZ 全称是 Science and Technology Institute of LuZhong
-            <br>
-            亦称 路科所 全称是 路中科学技术研究所
-            <br>
-            官方Github账号是 STI-LZ ，官方邮箱是 STI_LZ@outlook.com
-            <br>
-            我所的创立目的是为了招揽路中的高技术人才，共同促进路中的科技楼发展，下设有
-            <br>
-            机器人部(VEX-D)，信息部(OI-D)，无人机部(DR-D)，中文部(CN-D)，英文部，(EN-D)，网页部(WE-D)，情报部(IN-D)，技术部(TE-D)
-            <br>
-            创立于2023年4月26日。
-        </p>
+                    <a href="#" class="link" id="email">
+                        <i class="fa-solid fa-envelope"></i>
+                    </a>
+                    <a href="#" class="link" id="bilibili"
+                        target="_blank">
+                        <i class="fa-brands fa-bilibili"></i>
+                    </a>
+                    <a href="#" class="link" id="telegram" target="_blank">
+                        <i class="fa-brands fa-telegram"></i>
+                    </a>
+                </div>
+            </div>
+        </main>
+        <footer id="footer" class="fixed-bottom footer">
+            <span class="power">Copyright &copy; 2023 STI-LZ & Made by ERA-YES</a></span>
+        </footer>
     </section>
-    <br>
-    <section class="members">
-        创始成员有：
-            <br>
-            - <small> 排名不分先后 </small>
-            <br>
-            &nbsp;&nbsp;&nbsp;&nbsp;- XB
-            <br>
-            &nbsp;&nbsp;&nbsp;&nbsp;- LZH
-            <br>
-            &nbsp;&nbsp;&nbsp;&nbsp;- LTS
-            <br>
-            &nbsp;&nbsp;&nbsp;&nbsp;- ERA
-            <br>
-            &nbsp;&nbsp;&nbsp;&nbsp;- Florance
-            <br>
-            &nbsp;&nbsp;&nbsp;&nbsp;- LXY
-            <br>
-            &nbsp;&nbsp;&nbsp;&nbsp;- ZC
-            <br>
-            &nbsp;&nbsp;&nbsp;&nbsp;- 祝贺小姐
-            <br>
-            &nbsp;&nbsp;&nbsp;&nbsp;- 翔哥
-            <br>
-            &nbsp;&nbsp;&nbsp;&nbsp;- EternalSamurai
-    </section>
-    <br><br><br><br><br><br><br><br><br><br><br><br>
-    <footer>
-        Copyright &copy; STI-LZ &amp; Made by ERA_YES
-    </footer>
     <script type="text/javascript" src="./js/main.js"></script>
 </body>
 </html>
