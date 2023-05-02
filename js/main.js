@@ -51,7 +51,7 @@ window.addEventListener('load', function () {
 }, false)
 
 $(document).ready(function () {
-    $('#bg').attr('src', `./img/background${1 + ~~(Math.random() * 10)}.png`)
+    $('#bg').attr('src', `./img/background${1 + ~~2}.png`)
 });
 
 $("#bookmark").mouseover(function () {
