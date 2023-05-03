@@ -50,8 +50,14 @@ window.addEventListener('load', function () {
     }, 800);
 }, false)
 
+function getRandomInt(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min)) + min; //不含最大值，含最小值
+}
+
 $(document).ready(function () {
-    $('#bg').attr('src', `./img/background${1 + ~~2}.png`)
+    $('#bg').attr('src', `https://cn.bing.com/az/hprichbg/rb/VenetianRowing_ZH-CN6668445308_1920x1080.jpg`)
 });
 
 $("#bookmark").mouseover(function () {
