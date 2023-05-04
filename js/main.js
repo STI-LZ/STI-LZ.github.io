@@ -57,7 +57,7 @@ function getRandomInt(min, max) {
 }
 
 $(document).ready(function () {
-    $('#bg').attr('src', `https://cn.bing.com/az/hprichbg/rb/VenetianRowing_ZH-CN6668445308_1920x1080.jpg`)
+    $('#bg').attr('src', `https://api.cyrilstudio.top/bing/image.php/bing?rand=true`)
 });
 
 $("#bookmark").mouseover(function () {
