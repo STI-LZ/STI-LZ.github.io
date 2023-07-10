@@ -8,7 +8,7 @@
   font-family: 'Poppins', sans-serif;
   cursor: url("../images/cursor_1.png"), auto !important;
   /* 当用户手动导航或者 CSSOM scrolling API 触发滚动操作时 */
-  scroll-behavior: smooth; 
+   
 }
 
 body {
@@ -79,7 +79,7 @@ section::before {
   bottom: 0;
   width: 100%;
   height: 100px;
-  background: linear-gradient(to top, #1c0522, transparent);
+  background: linear-gradient(to top, #3f3f3f, transparent);
   z-index: 1000;
 }
 
@@ -127,7 +127,7 @@ section img#mountains_front {
 .sec {
   position: relative;
   padding: 100px;
-  background: #1c0522;
+  background: #3f3f3f;
 }
 
 .sec h2 {
