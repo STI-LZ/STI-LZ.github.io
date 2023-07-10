@@ -1,203 +1,142 @@
-/*全局样式*/
-html,
+/* 这是引入了一些字体 */
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap'); 
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  cursor: url("../images/cursor_1.png"), auto !important;
+  /* 当用户手动导航或者 CSSOM scrolling API 触发滚动操作时 */
+  scroll-behavior: smooth; 
+}
+
 body {
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
+  min-height: 100vh;
+  overflow-x: hidden;
+  background: linear-gradient(#2b1055,#7597de);
 }
 
-*,
-a,
-p {
-    text-decoration: none;
-    transition: 0.5s;
-    color: #efefef;
-    user-select: none;
-    cursor: url("../img/cursor_1.png"), auto !important;
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 30px 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 10000;
 }
 
-a:hover {
-    color: white;
+header .logo {
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+  font-size: 2em;
+  text-transform: uppercase; /* 大写 */
+  letter-spacing: 2px; /* 字符间距 */
 }
 
-.cards {
-    transition: 0.5s;
+header ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.cards:hover {
-    transform: scale(1.01);
-    transition: 0.5s;
+header ul li {
+  list-style: none;
+  margin-left: 20px;
 }
 
-/*背景*/
-.bg-all {
-    z-index: -1;
-    position: absolute;
-    top: calc(0px + 0px);
-    left: 0;
-    width: 100%;
-    height: calc(100% - 0px);
-    transition: .25s;
+header ul li a {
+  text-decoration: none;
+  padding: 6px 15px;
+  color: #fff;
+  border-radius: 20px;
 }
 
-#bg {
-    transform: scale(1.10);
-    filter: blur(10px);
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: opacity 1s, transform .25s, filter .25s;
-    backface-visibility: hidden;
+header ul li a:hover,
+header ul li a.active {
+  background: #fff;
+  color: #2b1055;
 }
 
-img.error {
-    display: none;
-}
-
-.cover {
-    opacity: 0;
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-image: radial-gradient(rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, .5) 100%), radial-gradient(rgba(0, 0, 0, 0) 33%, rgba(0, 0, 0, .3) 166%);
-    transition: .25s;
-}
-
-/*页面样式*/
 section {
-    display: block;
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    min-height: 600px;
-    transform: scale(1.10);
-    transition: ease 1.25s;
-    opacity: 0;
-    filter: blur(10px);
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  padding: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
 }
 
-main {
-    width: 100%;
-    height: 100%;
-    background: rgb(0 0 0 / 20%);
-    display: flex;
+section::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100px;
+  background: linear-gradient(to top, #1c0522, transparent);
+  z-index: 1000;
 }
 
-.left {
-    padding: 3%;
-    width: 38%;
-    align-self: center;
+section img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* object-fit CSS 属性指定可替换元素（例如：<img> 或 <video>）的内容应该如何适应到其使用高度和宽度确定的框。 */
+  object-fit: cover;
+  pointer-events: none;
 }
 
-/*头像*/
-.main-img {
-    display: flex;
-    align-items: center;
+section img#moon {
+  /* mix-blend-mode CSS 属性描述了元素的内容应该与元素的直系父元素的内容和元素的背景如何混合。 */ 
+  mix-blend-mode: screen;
 }
 
-.main-img img {
-    border-radius: 30%;
-    width: 120px;
+section img#mountains_front {
+  z-index: 10;
 }
 
-.main-img img:hover {
-    transform: rotate(360deg);
+#text {
+  position: absolute;
+  right: -350px;
+  color: #fff;
+  white-space: nowrap;
+  font-size: 7.5vw;
+  z-index: 9;
 }
 
-.img-title {
-    width: 100%;
-    margin-left: 12px;
-    transform: translateY(-8%);
-    font-size: 5rem;
+#btn {
+  text-decoration: none;
+  display: inline-block;
+  padding: 8px 30px;
+  border-radius: 40px;
+  background: #fff;
+  color: #2b1055;
+  font-size: 1.5em;
+  z-index: 9;
+  transform: translateY(100px);
 }
 
-
-/*简介*/
-.message {
-    background: rgb(0 0 0 / 25%);
-    backdrop-filter: blur(10px);
-    padding: 1rem;
-    border-radius: 6px;
-    margin-top: 3.5rem;
-    max-width: 460px;
-    cursor: pointer;
+.sec {
+  position: relative;
+  padding: 100px;
+  background: #1c0522;
 }
 
-.des {
-    display: flex;
-    justify-content: space-between;
+.sec h2 {
+  font-size: 3.5em;
+  margin-bottom: 10px;
+  color: #fff;
 }
 
-.des-title {
-    margin: 1rem 1rem;
-    line-height: 2rem;
-    margin-right: auto;
-}
-
-/*页脚样式*/
-footer {
-    text-align: center;
-    height: 40px;
-    backdrop-filter: blur(10px);
-    background: rgb(0 0 0 / 25%);
-}
-
-.power {
-    line-height: 40px;
-    color: #eeeeee;
-    animation: fade;
-    -webkit-animation: fade 0.75s;
-    -moz-animation: fade 0.75s;
-    -o-animation: fade 0.75s;
-    -ms-animation: fade 0.75s;
-}
-
-
-/*弹窗样式*/
-.iziToast {
-    backdrop-filter: blur(10px) !important;
-    border-radius: 30px !important;
-}
-
-.iziToast>.iziToast-body .iziToast-title {
-    font-size: 16px !important;
-}
-
-.iziToast-body .iziToast-message {
-    line-height: 18px !important;
-}
-
-.iziToast>.iziToast-body .iziToast-message {
-    margin: 6px 0px 4px 0px !important;
-}
-
-.iziToast:after {
-    box-shadow: none !important;
-}
-
-.iziToast>.iziToast-body .iziToast-texts {
-    margin: 6px 6px !important;
-    display: flex !important;
-    align-items: center;
-}
-
-.iziToast>.iziToast-body i {
-    margin-left: 6px;
-    margin-top: 10px;
-}
-
-.iziToast-message {
-    word-break: break-all !important;
-}
-
-.iziToast>.iziToast-close {
-    background: url(https://cdn.jsdelivr.net/gh/imsyy/file/pic/close.png) no-repeat 50% 50% !important;
-    background-size: 8px !important;
+.sec p {
+  font-size: 1em;
+  color: #fff;
 }

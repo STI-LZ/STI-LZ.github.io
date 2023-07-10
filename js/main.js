@@ -36,10 +36,6 @@ iziToast.settings({
 });
 
 window.addEventListener('load', function () {
-    $('#bg').css("cssText", "transform: scale(1);filter: blur(0px);transition: ease 1.5s;");
-    $('.cover').css("cssText", "opacity: 1;transition: ease 1.5s;");
-    $('#section').css("cssText", "transform: scale(1) !important;opacity: 1 !important;filter: blur(0px) !important");
-
     setTimeout(function () {
         iziToast.show({
             timeout: 2500,
@@ -50,29 +46,25 @@ window.addEventListener('load', function () {
     }, 800);
 }, false)
 
-function getRandomInt(min, max) {
-    min = Math.ceil(min);
-    max = Math.floor(max);
-    return Math.floor(Math.random() * (max - min)) + min; //不含最大值，含最小值
-}
+let stars = document.getElementById('stars')
+let moon = document.getElementById('moon')
+let mountains_behind = document.getElementById('mountains_behind')
+let text = document.getElementById('text')
+let btn = document.getElementById('btn')
+let mountains_front = document.getElementById('mountains_front')
+let header = document.querySelector('header')
 
-$(document).ready(function () {
-    $('#bg').attr('src', `https://api.cyrilstudio.top/bing/image.php/bing?rand=true`)
-});
-
-$("#bookmark").mouseover(function () {
-    $("#bookmark").css({
-        "background": "rgb(0 0 0 / 25%)",
-        'border-radius': '6px',
-        "backdrop-filter": "blur(5px)"
-    });
-}).mouseout(function () {
-    $("#bookmark").css({
-        "background": "none",
-        "border-radius": "6px",
-        "backdrop-filter": "none"
-    });
-});
+window.addEventListener('scroll', function(){
+    let value = window.scrollY;
+    stars.style.left = value * 0.25 + 'px'
+    moon.style.top = value * 1.05 + 'px'
+    mountains_behind.style.top = value * 0.5 + 'px'
+    mountains_front.style.top = value * 0 + 'px'
+    text.style.marginRight = value * 4 + 'px'
+    text.style.marginTop = value * 1.5 + 'px'
+    btn.style.marginTop = value * 1.5 + 'px'
+    header.style.top = value * 0.5 + 'px'
+})
 
 document.oncontextmenu = function () {
     iziToast.show({
@@ -103,4 +95,5 @@ let title2 = `
                                                 
                                                 \   
 `
+console.log("Wecloe to SIT-LZ")
 console.log(`%c${title1} %c${title2}`, styleTitle1, styleTitle2)
